@@ -21,3 +21,11 @@ Reference: https://carnal0wnage.attackresearch.com/2013/09/stealing-passwords-ev
 Reference: https://clymb3r.wordpress.com/2013/09/15/intercepting-password-changes-with-function-hooking/
 Reference: https://sensepost.com/blog/2016/intercepting-passwords-with-empire-and-winning/
 Reference: https://sensepost.com/blog/2019/recreating-known-universal-windows-password-backdoors-with-frida/
+
+#### Powershell downgrade
+Current systems with modern versions of PowerShell have several defensive (and logging) mechanisms built in. To mitigate; downgrade the PowerShell version when issueing a command:
+
+```powershell
+powershell -version 2 <command>
+```
+This bypasses transcript logging, but might not be effective against all mitigations (logging with sysmon for example).
