@@ -5,6 +5,4 @@ draft: true
 ---
 asdas
 
-#### Bypassing Defender (Work Out)
-reference: https://labs.f-secure.com/blog/bypassing-windows-defender-runtime-scanning/
-
+ToDo
