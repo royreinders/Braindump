@@ -3,9 +3,6 @@ title: "Dumping credentials"
 date: 2020-07-16T13:41:37+02:00
 draft: true
 ---
-Jump to:
-  * [Local](#local)
-  * [Remote](#remote)
 
 ## Local
 Ways of dumping the lsass.exe process locally
