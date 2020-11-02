@@ -5,3 +5,18 @@ draft: true
 ---
 
 #### Checking louckout policies
+
+#### Discovering Password spraying endpoints
+
+##### Logging in through office.com
+When you login to https://office.com using a (nonexistent) e-mail address, with the targets domainname you'll be redirected to either ADFS (in a hybrid environment) or the microsft login page (in an O365 setup).
+
+##### Running Amass with Aquatone
+Amass (or other domain-enum tools) can be used to get domainnames, which in turn can be used as input for aquatone. Aquatone can run screenshot scans on a predefined ports for the discovered domains:
+
+```
+$ amass -active -brute -o hosts.txt -d yahoo.com
+$ cat hosts.txt | aquatone
+```
+
+#### Password sprayting OWA or LYNC using Sprayingtoolkit
