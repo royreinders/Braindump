@@ -35,3 +35,8 @@ Name: John Adams Smith
 {f}{m}.{last}               > ja.smith
 {f}{last}[4]@example.com    > jsmit@example.com
 ```
+***
+
+#### Good OSINT sources
+ Snov.io; https://snov.io
+ ***
