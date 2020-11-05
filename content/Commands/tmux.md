@@ -23,6 +23,8 @@ tmux a -t <name>
 ```tmux kill-session -t 0```
 
 #### Within a session
+##### New Session
+```<ctrl-b> :new```
 ##### Create Window
 ```<ctrl+b>, c```
 ##### Switch Window
@@ -35,3 +37,11 @@ tmux a -t <name>
 ```<ctrl+b>, "```
 ##### Move to
 ```<ctrl+b>, ← ↑ → ↓```
+##### Switch to next session
+```<ctrl-b> )```
+##### Switch to previous session
+```<ctrl-b> (```
+##### Rename session
+```<ctrl+b>, $```
+##### Kill session
+```<ctrl+b>, :kill-session```

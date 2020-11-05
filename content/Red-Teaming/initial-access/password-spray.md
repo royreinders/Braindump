@@ -19,4 +19,9 @@ $ amass -active -brute -o hosts.txt -d yahoo.com
 $ cat hosts.txt | aquatone
 ```
 
-#### Password sprayting OWA or LYNC using Sprayingtoolkit
+#### Password spraying OWA or LYNC using Sprayingtoolkit ToDo
+
+
+#### Password spraying ADFS using Burp ToDo
+
+In the intruder attack window, inverse search for 'incorrect' to filter valid (or expired) login attempts.
