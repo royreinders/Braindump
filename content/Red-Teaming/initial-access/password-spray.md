@@ -18,6 +18,7 @@ Amass (or other domain-enum tools) can be used to get domainnames, which in turn
 $ amass -active -brute -o hosts.txt -d yahoo.com
 $ cat hosts.txt | aquatone
 ```
+***
 
 #### Password spraying OWA or LYNC using Sprayingtoolkit ToDo
 
