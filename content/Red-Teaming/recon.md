@@ -40,3 +40,8 @@ Name: John Adams Smith
 #### Good OSINT sources
  Snov.io; https://snov.io
  ***
+
+
+#### Enumerating cloud infrastructure ToDo
+https://github.com/initstring/cloud_enum
+***

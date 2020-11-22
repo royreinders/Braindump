@@ -11,6 +11,10 @@ draft: false
 ```docker ps -a```
 ##### List all pulled Docker images
 ```docker images```
+##### Attach to a docker container
+```docker attach <container id>```
+##### Detach from a running container
+User CTRL+P, CTRL+Q to detach from the container while keeping it running
 
 #### Dockerfile
 
