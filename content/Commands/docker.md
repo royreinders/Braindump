@@ -15,6 +15,7 @@ draft: false
 ```docker attach <container id>```
 ##### Detach from a running container
 User CTRL+P, CTRL+Q to detach from the container while keeping it running
+***
 
 #### Dockerfile
 
@@ -22,7 +23,9 @@ User CTRL+P, CTRL+Q to detach from the container while keeping it running
 
 ##### Build command
 ```$ docker build -t example --build-arg ssh_prv_key="$(cat ~/.ssh/id_rsa)" .```
+
 I ran in to issues where the private key could not be copied to the docker container while keeping a correct format due to the newlines. The following commands converts the key into a single-line file.
+
 ```awk -v ORS='\\n' '1' key > key_singleline```
 
 ##### Run command

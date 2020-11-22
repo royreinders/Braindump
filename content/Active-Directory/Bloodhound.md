@@ -1,9 +1,8 @@
 ---
 title: "Bloodhound"
 date: 2020-07-16T13:41:37+02:00
-draft: true
+draft: false
 ---
-asdas
 
 #### Run Bloodhound from a non-domain joined system
 
