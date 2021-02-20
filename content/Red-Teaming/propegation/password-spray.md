@@ -1,5 +1,5 @@
 ---
-title: "miscellaneous"
+title: "Internal Password Spray"
 date: 2020-07-17T20:59:33+02:00
 draft: false
 ---
