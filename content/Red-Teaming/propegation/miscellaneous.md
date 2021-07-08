@@ -4,25 +4,6 @@ date: 2020-07-17T20:59:33+02:00
 draft: false
 ---
 
-#### Search for cpassword entries in group policies
-
-```findstr /S /I cpassword \\<FQDN>\sysvol\<FQDN>\policies\*.xml'```
-
-***
-
-
-#### Get the DC from a Domain Joines machine
-
-PowerShell:
-```
-$env:LOGONSERVER
-```
-CMD:
-```
-echo %logonserver%
-```
-***
-
 #### Using PowerView to enumerate Shares, Admin access and more (ToDo)
 https://book.hacktricks.xyz/windows/basic-powershell-for-pentesters/powerview
 
