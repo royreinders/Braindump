@@ -25,3 +25,11 @@ $ cat hosts.txt | aquatone
 
 #### Password spraying ADFS using Burp ToDo
 In the intruder attack window, inverse search for 'incorrect' to filter valid (or expired) login attempts.
+
+#### Identify whether MFA is enabled using MFASweep
+Repository: https://github.com/dafthack/MFASweep
+Basic usage:
+
+```
+Invoke-MFASweep -Username targetuser@targetdomain.com -Password Winter2020 
+```
