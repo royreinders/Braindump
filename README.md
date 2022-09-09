@@ -1,2 +1,2 @@
 # Documentation
-Personal documentation on pentesting / red teaming
+Personal braindump on pentesting / red teaming
